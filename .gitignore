@@ -1,0 +1,114 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv*
+v-env/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Node.js
+node_modules/
+yarn.lock
+yarn-error.log
+npm-debug.log*
+
+# Development
+.env
+!.env.example
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.bak
+
+# Project Specific
+src/exo/tinychat/images/*.png
+src/exo/.exo_used_ports
+src/exo/.exo_node_id
+src/studio/aws_cf_deploy_anything_llm.json
+
+# Testing and Coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Build
+*.manifest
+*.spec
+.pybuilder/
+target/
+build/
+dist/
+
+# Documentation
+docs/_build/
+site/
+
+# Jupyter
+.ipynb_checkpoints
+Untitled.ipynb
+
+# Type Checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# IDE
+.spyderproject
+.spyproject
+.ropeproject
+**/*.xcodeproj/*
+.aider*
+
+# Databases
+*.sqlite
+*.sqlite3
+*.db
+
+# Logs
+*.log
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Temporary files
+.webassets-cache
+.scrapy
+celerybeat-schedule
+celerybeat.pid
