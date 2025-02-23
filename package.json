@@ -1,0 +1,94 @@
+{
+  "name": "beehive",
+  "version": "0.1.0",
+  "description": "Distributed Social Computing for AI",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"npm run dev:electron\" \"npm run dev:server\"",
+    "dev:electron": "cross-env NODE_ENV=development electron .",
+    "dev:server": "cross-env NODE_ENV=development nodemon src/backend/server.js",
+    "lint": "eslint src/",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "jest --config jest.e2e.config.js",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@lancedb/lancedb": "^0.5.0",
+    "@xenova/transformers": "^2.15.0",
+    "better-sqlite3": "^9.4.0",
+    "electron-store": "^8.1.0",
+    "express": "^4.18.2",
+    "multer": "^1.4.5-lts.1",
+    "wrtc": "^0.4.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
+    "tailwindcss": "^3.4.1",
+    "winston": "^3.11.0",
+    "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@jest/globals": "^29.7.0",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@types/jest": "^29.5.12",
+    "autoprefixer": "^10.4.17",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "mock-fs": "^5.2.0",
+    "nodemon": "^3.0.3",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "supertest": "^6.3.4"
+  },
+  "build": {
+    "appId": "com.beehive.app",
+    "productName": "Beehive",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "category": "Utility"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "author": "",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/tests/**"
+    ],
+    "coverageDirectory": "coverage",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/tests/setup.js"
+    ]
+  }
+} 
